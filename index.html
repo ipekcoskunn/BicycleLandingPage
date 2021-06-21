@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Website Landing Page</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="./assets/images/logo.png"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+
+                <h2>It's not just Bicycle<br> It's <span class="titleColor">Kepi</span>
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit necessitatibus modi velit dolor in a
+                    officia! Corporis illo, minus praesentium voluptates dolor eligendi minima.</p>
+                <a href="#" class="changeColor">Learn More</a>
+
+            </div>
+            <div class="imgBox">
+                <img src="./assets/images/bicycle1.png" class="bicycles">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./assets/images/bicycle1.png" onclick="imgSlider('./assets/images/bicycle1.png');changeCircleColor('#20758a');changeColor('#20758a');titleColor('#20758a')"></li>
+            <li><img src="./assets/images/bicycle2.png" onclick="imgSlider('./assets/images/bicycle2.png');changeCircleColor('#b81b1bc0');changeColor('#b81b1bc0');titleColor('#b81b1bc0')"></li>
+            <li><img src="./assets/images/bicycle3.png" onclick="imgSlider('./assets/images/bicycle3.png');changeCircleColor('#a79011c5');changeColor('#a79011c5');titleColor('#a79011c5')"></li>
+        </ul>
+        <ul class="sm-icon">
+            <li><a href="#"><img src="./assets/images/twitter.png"></a></li>
+            <li><a href="#"><img src="./assets/images/facebook.png"></a></li>
+            <li><a href="#"><img src="./assets/images/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.bicycles').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle= document.querySelector('.circle');
+            const ccolor= document.querySelector('.changeColor');
+            const tcolor= document.querySelector('.titleColor');
+            ccolor.style.background= color;
+            tcolor.style.color= color;
+            circle.style.background= color;
+
+        }
+    </script>
+
+
+</body>
+
+</html>
